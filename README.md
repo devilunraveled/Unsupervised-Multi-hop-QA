@@ -14,15 +14,11 @@ The model first defines a set of **basic operators** to
 retrieve / generate relevant information from each
 input source or to aggregate different information, as follows. 
 
-<p align="center">
-<img src=Resource/operators.png width=700/>
-</p>
+![Operators](./Resource/operators.png)
 
 Afterwards, we define six **Reasoning Graphs**. Each corresponds to one type of multihop question and is formulated as a computation graph built upon the operators. We generate multihop question-answer pairs by executing the reasoning graph. 
 
-<p align="center">
-<img src=Resource/framework.png width=800/>
-</p>
+![framework](./Resource/framework.png)
 
 ## Requirements
 
@@ -111,9 +107,7 @@ print(nlp.qg_with_answer_text(test_passage, "19 January 1980"))
 
 DescribeEnt generate a sentence *S* that describes the given entity *E* based on the information of the table *T*. We implement this using the [GPT-TabGen model](https://arxiv.org/pdf/2004.07347.pdf) (Chen et al., 2020a). The model first uses template to flatten the table *T* into a document *PT* and then feed *PT* to the pre-trained GPT-2 model to generate the output sentence *S*. The framework is as follows. 
 
-<p align="center">
-<img src=Resource/table2text.png width=600/>
-</p>
+![Table2Text](./Resource/table2text.png)
 
 We finetune the GPT2 model on the [ToTTo dataset](https://github.com/google-research-datasets/ToTTo) (Parikh et al., 2020), a large-scale dataset of controlled table-to-text generation. Our fine-tuned model can be downloaded [here](https://drive.google.com/file/d/1MREzgOdXcFEo-wmDmxLqW7YFCuMreRkQ/). After downloading the finetuned model, put it under the `Pretrained_Models` directory. Then you could test this module by running the following python codes: 
 ```python

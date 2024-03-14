@@ -11,9 +11,9 @@ import stanza
 
 ###### Global Settings
 EXPERIMENT = 'HybridQA' # The experiment you want to run, choose 'HotpotQA' or 'HybridQA'
-QG_DEVICE = 5  # gpu device to run the QG module
-BERT_DEVICE = 3 # gpu device to run the BERT module
-TABLE2TEXT_DEVICE = 3 # gpu devide to run the Table2Text module
+QG_DEVICE = 0  # gpu device to run the QG module
+BERT_DEVICE = 0 # gpu device to run the BERT module
+TABLE2TEXT_DEVICE = 0 # gpu devide to run the Table2Text module
 QUESTION_TYPE = 'table2text' # the type of question you want to generate
 # for hybridQA, the options are: 'table2text', 'text2table', 'text_only', 'table_only'
 # for hotpotQA, the options are: 'text2text', 'comparison'
